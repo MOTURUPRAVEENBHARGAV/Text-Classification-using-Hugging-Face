@@ -1,7 +1,7 @@
 # Text-Classification-using-Hugging-Face
 Sentiment Analysis using Hugging Face Pretrained Model (NLP BERT Multilingual Model)
 
-Type of Model used for this sentiment analysis to procure 90% above is : "nlptown/bert-base-multilingual-uncased-sentiment" from the hugging hub "https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment"
+Type of Model used for this sentiment analysis to procure ACCURACY: 90% above is : "nlptown/bert-base-multilingual-uncased-sentiment" from the hugging hub "https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment"
 
 References: KrishNair, Abhishek Jaishwal , The Artificial Guy, Data Science Community
 
