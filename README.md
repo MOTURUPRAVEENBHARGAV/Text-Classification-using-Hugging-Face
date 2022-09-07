@@ -5,7 +5,7 @@ Type of Model used for this sentiment analysis to procure 90% above is : "nlptow
 
 References: KrishNair, Abhishek Jaishwal , The Artificial Guy, Data Science Community
 
-Paper_read : wwww.huggingface.co
+Paper_read : wwww.huggingface.co , https://jalammar.github.io/illustrated-bert/
 
 bert-base-multilingual-uncased-sentiment:
 
