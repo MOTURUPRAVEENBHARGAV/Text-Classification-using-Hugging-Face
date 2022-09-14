@@ -31,4 +31,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a python script using actions
-        run: python .github/workflows/app.py
+        run: python ./app.py
