@@ -14,9 +14,9 @@ app= Flask(__name__) #Flask App Object
 #Decorator
 @app.route('/') #Home Page
 def pop_results():
-    tokenizer = AutoTokenizer.from_pretrained("../../model")
+    tokenizer = AutoTokenizer.from_pretrained(r"D:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\bert pretrained Model\model")
     corpus = ["This meeting is adorable and wonderful","You are looking so furious"]
-    multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"../../model",num_labels=5)
+    multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"D:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\bert pretrained Model\model",num_labels=5)
     pred = model_predict(multi_model,tokenizer,lis=corpus)
     pred = change_labels(pred)
     return jsonify({"Results":pred})
