@@ -15,7 +15,8 @@ app= Flask(__name__) #Flask App Object
 @app.route('/') #Home Page
 def pop_results():
     tokenizer = AutoTokenizer.from_pretrained("./model")
-    corpus = ["This meeting is adorable and wonderful","You are looking so furious"]
+    corpus = "Question1","Self","Good"
+            "Question2","Manager","Bad"
     multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"./model",num_labels=5)
     pred = model_predict(multi_model,tokenizer,lis=corpus)
     pred = change_labels(pred)
