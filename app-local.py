@@ -46,16 +46,9 @@ def pop_results():
         pred = change_labels(pred)
         for i in range(0,len(l)):
             data["inputs"][i]["Polarity"] = pred[i]
-    print(data)
+    # print(data)
 
     return data
-
-
-
-    # multi_model = TFAutoModelForSequenceClassification.from_pretrained(r"D:\DESKT\INTERNSHIPS\Talent Spotify\NLP Tasks\Sentiment Analysis\bert pretrained Model\model",num_labels=5)
-    # pred = model_predict(multi_model,tokenizer,lis=corpus)
-    # pred = change_labels(pred)
-    # return jsonify({"Results":pred})
 
 @app.route('/postData', methods=['POST', 'GET'])
 def postData():
@@ -63,12 +56,12 @@ def postData():
     content = req.content
     if request.method == "POST":
         l=[]                
-        for input in req["inputs"]:
+        for input in content["inputs"]:
             l.append(input["Response"])
         pred = model_predict(multi_model,tokenizer,lis=l)
         pred = change_labels(pred)
         for i in range(0,len(l)):
-            req["inputs"][i]["Polarity"] = pred[i]
+            content["inputs"][i]["Polarity"] = pred[i]
 
     return content
 
